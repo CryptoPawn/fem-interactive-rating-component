@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="scripts.js"></script>
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body>
+  <main>
+    <section class="state-rating">
+      <figure class="circle"><img class="star-icon" src="images/icon-star.svg" alt="Star Icon"></figure>
+
+      <article class="text-section">
+        <h1>How did we do?</h1>
+        <p>Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!</p>
+      </article>
+
+      <div class="rating-buttons">
+        <h2 class="circle rate-button">1</h2>
+        <h2 class="circle rate-button">2</h2>
+        <h2 class="circle rate-button">3</h2>
+        <h2 class="circle rate-button">4</h2>
+        <h2 class="circle rate-button">5</h2>
+      </div>
+
+      <button class="submit-button" id="submit" value="Submit">Submit</button>
+    </section>
+
+
+    <section class="state-thankyou" style="display:none">
+      <figure><img class="illustration" src="images/illustration-thank-you.svg" alt="Mobile illustration"></figure>
+
+      <p class="rating-selection-container">You selected&nbsp;<span id="selected-rating"></span>&nbsp;out of 5</p>
+
+      <article class="text-section">
+        <h1>Thank you!</h1>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!</p>
+      </article>
+    </section>
+
+    <div class="gradient"></div>
+  </main>
+</body>
+
+</html>

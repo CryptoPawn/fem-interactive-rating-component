@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    color: var(--nc-lightgrey);
+}
+
+:root {
+    /* Primary Colors*/
+    --pc-orange: hsl(26, 97%, 53%);
+
+    /* Neutral Colors*/
+    --nc-white: hsl(0, 0%, 100%);
+    --nc-lightgrey: hsl(217, 12%, 63%);
+    --nc-mediumgrey: hsl(216, 12%, 54%);
+    --nc-darkblue: hsl(216, 24%, 12%);
+    --nc-verydarkblue: hsl(216, 12%, 8%);
+    --nc-t-medium-grey: hsla(216, 12%, 54%, 10%);
+
+    /* Font Weights*/
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+
+
+/* STATES */
+button:hover {
+    color: var(--pc-orange);
+    background-color: var(--nc-white);
+}
+
+.rating-buttons > *:hover {
+    color: var(--nc-white)!important;
+    background-color: var(--pc-orange)!important;
+
+    cursor: pointer;
+}
+/*//////////////////////////////////////////////////////*/
+
+
+
+/* CENTER COMPONENT */
+html, body { height: 100%; }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--nc-verydarkblue);
+}
+/*//////////////////////////////////////////////////////*/
+
+
+
+/* COMPONENT BG */
+main {
+    background-color: var(--nc-darkblue);
+    height: 420px;
+    width: 420px;
+    padding: 30px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gradient {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    position: absolute;
+
+    background: rgb(124,135,152);
+    background: radial-gradient(circle, rgba(124,135,152,1) 0%, rgba(37,45,55,0) 60%);
+    background-repeat: no-repeat;
+    background-position-y: -250px;
+    opacity: 10%;
+}
+/*//////////////////////////////////////////////////////*/
+
+
+
+/* COMPONENT CONTENT */
+section {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+} section > * { z-index: 1; } /* make content appear in front of gradient */
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: var(--nc-t-medium-grey);
+}
+
+h1 {
+    color: var(--nc-white);
+    font-size: 28px;
+    font-weight: var(--fw-bold);
+    margin-bottom: 10px;
+}
+
+p { line-height: 25px; }
+
+.rating-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+button {
+    height: 50px;
+    width: 100%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--pc-orange);
+    color: var(--nc-white);
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+/*//////////////////////////////////////////////////////*/
+
+
+
+/* THANK YOU CONTENT */
+.state-thankyou {
+    /* display: none; */
+    align-items: center;
+    text-align: center;
+}
+
+.rating-selection-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 15px;
+
+    color: var(--pc-orange);
+    background-color: var(--nc-t-medium-grey);
+} #selected-rating { color: var(--pc-orange); }
+/*//////////////////////////////////////////////////////*/
+
+
+
+@media screen and (max-width: 430px) {
+    main {
+        width: 330px;
+        height: 360px;
+    }
+
+    .circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p, #selected-rating {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .gradient {
+        width: 200%;
+        height: 200%;
+        background-position-y: -200px;
+    }
+}
