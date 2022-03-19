@@ -105,7 +105,7 @@ section {
     background-color: var(--nc-t-medium-grey);
 }
 
-h1 {
+h2 {
     color: var(--nc-white);
     font-size: 28px;
     font-weight: var(--fw-bold);
@@ -172,7 +172,7 @@ button {
         height: 40px;
     }
 
-    h1 {
+    h2 {
         font-size: 22px;
     }
 
